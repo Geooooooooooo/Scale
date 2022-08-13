@@ -1,0 +1,3 @@
+[submodule "ScaleEngine-x64/vendor/spdlog"]
+	path = ScaleEngine-x64/vendor/spdlog
+	url = https://github.com/gabime/spdlog
