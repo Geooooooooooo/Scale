@@ -15,9 +15,15 @@
     <ClInclude Include="src\Scale\App.h" />
     <ClInclude Include="src\Scale\Core.h" />
     <ClInclude Include="src\Scale\EnteryPoint.h" />
+    <ClInclude Include="src\Scale\Events\AppEvent.h" />
+    <ClInclude Include="src\Scale\Events\Event.h" />
+    <ClInclude Include="src\Scale\Events\KeyEvent.h" />
+    <ClInclude Include="src\Scale\Events\MouseEvent.h" />
+    <ClInclude Include="src\Scale\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Scale\App.cpp" />
+    <ClCompile Include="src\Scale\Log.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -67,8 +73,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>SL_WINDOWS_PLATFORM;SL_BUILD_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>
-      </AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)ScaleEngine-x64\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -83,6 +88,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)ScaleEngine-x64\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

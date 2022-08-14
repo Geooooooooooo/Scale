@@ -4,7 +4,13 @@
 
 extern Scale::App* Scale::CreateApp();
 
+//Входная точка в программу
 int main(int argc, char** argv) {
+	//Инициализаия логгера
+	Scale::Log::Init();
+	SL_CORE_WARN("Initialized Log!");
+
+	//Создание приложения
 	auto app = Scale::CreateApp();
 	app->Run();
 	delete app;
