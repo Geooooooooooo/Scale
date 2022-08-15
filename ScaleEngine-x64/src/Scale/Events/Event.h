@@ -2,10 +2,6 @@
 
 #include "../Core.h"
 
-#include <string>
-#include <functional>
-#include <sstream>
-
 namespace Scale {
 
 	// Events in Hazel are currently blocking, meaning when an event occurs it
