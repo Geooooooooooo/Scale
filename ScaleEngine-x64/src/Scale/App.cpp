@@ -8,9 +8,11 @@
 
 namespace Scale {
 
+//Макрос связывающий функцию и аргумент
 #define BIND_EVENT_FN(x) std::bind(&App::x, this, std::placeholders::_1)
 
 	App::App() : m_Window{ (std::unique_ptr<Window>)Window::create() } {
+
 		m_Window->setEventCallback(BIND_EVENT_FN(onEvent));
 	}
 
