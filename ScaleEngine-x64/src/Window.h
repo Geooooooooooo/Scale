@@ -4,7 +4,6 @@
 
 #include "Scale/Core.h"
 #include "Scale/Events/Event.h"
-#include "Scale/Log.h"
 
 #include "../../Libs/include/GLFW/glfw3.h"
 
@@ -44,11 +43,11 @@ namespace Scale {
 		GLFWwindow* m_Window;
 
 		struct WindowData {
-			std::string wd_Title;
-			UINT wd_Widht, wd_Height;
-			bool wd_VertSyncOn;
+			std::string wd_Title = "";
+			UINT wd_Widht = 0U, wd_Height = 0U;
+			bool wd_VertSyncOn = false;
 
-			EventCallbackFn wd_EventCallback;
+			EventCallbackFn wd_EventCallback = 0;
 		};
 
 		WindowData m_Data;

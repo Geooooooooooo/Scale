@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "../../src/Window.h"
+#include "Events/AppEvent.h"
 
 namespace Scale {
 
@@ -12,9 +13,13 @@ namespace Scale {
 		~App();
 
 		void Run();
+
+		void onEvent(Event& a);
 	private:
-		Window* m_Window;
-		bool m_Runung = true;
+		bool onWindowClose(WindowCloseEvent& event);
+
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
 
 	App* CreateApp();

@@ -10,7 +10,7 @@ namespace Scale {
 
 		EVENT_CLASS_CATEGORY(EC_Keyboard | EC_Input)
 	protected:
-		KeyEvent(const int keycode) : m_KeyCode(keycode) {}
+		KeyEvent(int keycode) : m_KeyCode(keycode) {}
 
 		int m_KeyCode;
 	};
@@ -47,7 +47,7 @@ namespace Scale {
 
 	class SCALE_API KeyTypedEvent : public KeyEvent {
 	public:
-		KeyTypedEvent(const int keycode) : KeyEvent(keycode) {}
+		KeyTypedEvent(int keycode) : KeyEvent(keycode) {}
 
 		std::string toString() const override
 		{

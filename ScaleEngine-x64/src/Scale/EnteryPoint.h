@@ -10,8 +10,6 @@ int main(int argc, char** argv) {
 	Scale::Log::Init();
 
 	auto app = Scale::CreateApp();
-	if(app == nullptr) { SL_CORE_INFO("App was not created!"); exit(-2); }
-
 	app->Run();
 	delete app;
 }
