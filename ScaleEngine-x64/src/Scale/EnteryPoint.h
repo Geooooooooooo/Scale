@@ -1,17 +1,17 @@
 #pragma once
 
+#include "App.h"
+
 #ifdef SL_WINDOWS_PLATFORM
 
 extern Scale::App* Scale::CreateApp();
 
-//Входная точка в программу
 int main(int argc, char** argv) {
-	//Инициализаия логгера
 	Scale::Log::Init();
-	SL_CORE_WARN("Initialized Log!");
 
-	//Создание приложения
 	auto app = Scale::CreateApp();
+	if(app == nullptr) { SL_CORE_INFO("App was not created!"); exit(-2); }
+
 	app->Run();
 	delete app;
 }

@@ -5,23 +5,19 @@
 #include "Log.h"
 
 namespace Scale {
-	App::App() {
-
+	App::App() : m_Window{ Window::create() } {
+		SL_CORE_INFO("App::App()");
 	}
 
-	App::~App() {
-
-	}
+	App::~App() {}
 
 	void App::Run() {
-		WindowResizeEvent e(1000, 800);
-		if (e.isInCategory(EC_Application)) {
-			SL_TRACE(e.toString());
-		}
-		if (e.isInCategory(EC_Input)) {
-			SL_TRACE(e.toString());
+		SL_CORE_INFO("Main loop start.");
+
+		while (true) {
+			m_Window->onUpdate();
 		}
 
-		while (true);
+		SL_CORE_INFO("Main loop end.");
 	}
 }

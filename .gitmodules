@@ -1,3 +1,6 @@
 [submodule "ScaleEngine-x64/vendor/spdlog"]
 	path = ScaleEngine-x64/vendor/spdlog
 	url = https://github.com/gabime/spdlog
+[submodule "ScaleEngine-x64/vendor/GLFW"]
+	path = ScaleEngine-x64/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW
