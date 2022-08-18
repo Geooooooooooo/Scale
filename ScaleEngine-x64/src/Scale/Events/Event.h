@@ -40,6 +40,9 @@ namespace Scale {
 		//Базовый класс событий
 		friend class EventDispatcher;
 	public:
+
+		bool m_Handled = false;
+
 		//Функция возвращающая последнее событие
 		virtual EventType GetEventType() const = 0;
 		virtual const char* GetName() const = 0;
@@ -50,9 +53,6 @@ namespace Scale {
 			return GetCategoryFlags() & category;
 		}
 
-	protected:
-		//Показывает, было ли событие обработано или нет
-		bool m_Handled = false;
 	};
 
 	class EventDispatcher {

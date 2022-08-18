@@ -116,7 +116,7 @@ namespace Scale {
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double x, double y) {
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
-			MouseMovedEvent event((float)x, (float)y);
+			MouseMovedEvent event(x, y);
 			data.wd_EventCallback(event);
 		});
 

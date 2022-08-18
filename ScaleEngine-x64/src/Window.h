@@ -22,7 +22,7 @@ namespace Scale {
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;
 
-		Window(const WindowProps& props);
+		Window(const WindowProps&);
 		virtual ~Window();
 		void onUpdate();
 		UINT getWidth() { return m_Data.wd_Widht; };
@@ -31,10 +31,10 @@ namespace Scale {
 		void setEventCallback(const EventCallbackFn& callback) { 
 			m_Data.wd_EventCallback = callback; 
 		};
-		void setVerticalSync(bool enabled);
+		void setVerticalSync(bool);
 		bool isVerticalSyncOn() const;
 
-		void Init(const WindowProps& props);
+		void Init(const WindowProps&);
 		void shutdown();
 
 		static Window* create(const WindowProps& props = WindowProps());

@@ -3,6 +3,8 @@
 #include "Core.h"
 #include "../../src/Window.h"
 #include "Events/AppEvent.h"
+#include "LayerStack.h"
+#include "Layer.h"
 
 namespace Scale {
 
@@ -14,12 +16,17 @@ namespace Scale {
 
 		void Run();
 
-		void onEvent(Event& a);
+		void onEvent(Event&);
+
+		void pushLayer(Layer_ptr);
+		void pushOverlay(Layer_ptr);
 	private:
-		bool onWindowClose(WindowCloseEvent& event);
+		bool onWindowClose(WindowCloseEvent&);
 
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
+
+		LayerStack m_LayerStack;
 	};
 
 	App* CreateApp();
